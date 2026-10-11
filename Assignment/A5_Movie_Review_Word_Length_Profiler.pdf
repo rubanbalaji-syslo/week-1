@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2299 >>
+stream
+BT /F2 15 Tf 42 800 Td (The Movie Review Word Length Profiler) Tj ET
+BT /F1 9 Tf 42 774 Td (Week 1 Assignment - Problem 5 | Java) Tj ET
+BT /F2 11 Tf 42 752 Td (Problem Summary) Tj ET
+BT /F1 8.2 Tf 42 733 Td (Split a review on whitespace and count Short words \(1-4 characters\), Medium words \(5-8 characters\), and) Tj ET
+BT /F1 8.2 Tf 42 719 Td (Long words \(9 or more characters\).) Tj ET
+BT /F2 11 Tf 42 702 Td (Java Solution) Tj ET
+BT /F3 6.7 Tf 45 683 Td (public class Main {) Tj ET
+BT /F3 6.7 Tf 45 674 Td (    static void classifyWordLengths\(String review\) {) Tj ET
+BT /F3 6.7 Tf 45 665 Td (        int shortCount = 0, mediumCount = 0, longCount = 0;) Tj ET
+BT /F3 6.7 Tf 45 656 Td (        String trimmed = review == null ? "" : review.trim\(\);) Tj ET
+BT /F3 6.7 Tf 45 647 Td (        if \(!trimmed.isEmpty\(\)\) {) Tj ET
+BT /F3 6.7 Tf 45 638 Td (            String[] words = trimmed.split\("\\\\s+"\);) Tj ET
+BT /F3 6.7 Tf 45 629 Td (            for \(String word : words\) {) Tj ET
+BT /F3 6.7 Tf 45 620 Td (                int length = word.length\(\);) Tj ET
+BT /F3 6.7 Tf 45 611 Td (                if \(length <= 4\) shortCount++;) Tj ET
+BT /F3 6.7 Tf 45 602 Td (                else if \(length <= 8\) mediumCount++;) Tj ET
+BT /F3 6.7 Tf 45 593 Td (                else longCount++;) Tj ET
+BT /F3 6.7 Tf 45 584 Td (            }) Tj ET
+BT /F3 6.7 Tf 45 575 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 566 Td (        System.out.printf\("Short: %d | Medium: %d | Long: %d%n",) Tj ET
+BT /F3 6.7 Tf 45 557 Td (            shortCount, mediumCount, longCount\);) Tj ET
+BT /F3 6.7 Tf 45 548 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 539 Td (    public static void main\(String[] args\) {) Tj ET
+BT /F3 6.7 Tf 45 530 Td (        classifyWordLengths\("This movie was absolutely fantastic and thrilling"\);) Tj ET
+BT /F3 6.7 Tf 45 521 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 512 Td (}) Tj ET
+BT /F2 11 Tf 42 500 Td (Sample Output) Tj ET
+BT /F3 7.4 Tf 45 481 Td (Short: 3 | Medium: 1 | Long: 3) Tj ET
+BT /F2 11 Tf 42 467 Td (Complexity / Key Notes) Tj ET
+BT /F1 8.2 Tf 42 448 Td (Time: O\(c\), where c is the number of characters in the review. Extra space: O\(c\) for the word array. As in) Tj ET
+BT /F1 8.2 Tf 42 434 Td (the source, token length includes punctuation.) Tj ET
+BT /F1 7 Tf 510 18 Td (1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000002611 00000 n 
+0000002681 00000 n 
+0000002756 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2824
+%%EOF

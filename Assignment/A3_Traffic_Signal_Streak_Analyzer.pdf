@@ -1,0 +1,81 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2805 >>
+stream
+BT /F2 15 Tf 42 800 Td (The Traffic Signal Streak Analyzer) Tj ET
+BT /F1 9 Tf 42 774 Td (Week 1 Assignment - Problem 3 | Java) Tj ET
+BT /F2 11 Tf 42 752 Td (Problem Summary) Tj ET
+BT /F1 8.2 Tf 42 733 Td (Find the longest consecutive run of the same signal character and print its color and length. If longest) Tj ET
+BT /F1 8.2 Tf 42 719 Td (streaks tie, the first one is retained.) Tj ET
+BT /F2 11 Tf 42 702 Td (Java Solution) Tj ET
+BT /F3 6.7 Tf 45 683 Td (public class Main {) Tj ET
+BT /F3 6.7 Tf 45 674 Td (    static void findLongestStreak\(String signalLog\) {) Tj ET
+BT /F3 6.7 Tf 45 665 Td (        if \(signalLog == null || signalLog.isEmpty\(\)\) {) Tj ET
+BT /F3 6.7 Tf 45 656 Td (            System.out.println\("No Signal Readings"\);) Tj ET
+BT /F3 6.7 Tf 45 647 Td (            return;) Tj ET
+BT /F3 6.7 Tf 45 638 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 629 Td (        char bestColor = signalLog.charAt\(0\);) Tj ET
+BT /F3 6.7 Tf 45 620 Td (        int bestLength = 1;) Tj ET
+BT /F3 6.7 Tf 45 611 Td (        char currentColor = signalLog.charAt\(0\);) Tj ET
+BT /F3 6.7 Tf 45 602 Td (        int currentLength = 1;) Tj ET
+BT /F3 6.7 Tf 45 593 Td (        for \(int i = 1; i < signalLog.length\(\); i++\) {) Tj ET
+BT /F3 6.7 Tf 45 584 Td (            char c = signalLog.charAt\(i\);) Tj ET
+BT /F3 6.7 Tf 45 575 Td (            if \(c == currentColor\) currentLength++;) Tj ET
+BT /F3 6.7 Tf 45 566 Td (            else {) Tj ET
+BT /F3 6.7 Tf 45 557 Td (                currentColor = c;) Tj ET
+BT /F3 6.7 Tf 45 548 Td (                currentLength = 1;) Tj ET
+BT /F3 6.7 Tf 45 539 Td (            }) Tj ET
+BT /F3 6.7 Tf 45 530 Td (            if \(currentLength > bestLength\) {) Tj ET
+BT /F3 6.7 Tf 45 521 Td (                bestLength = currentLength;) Tj ET
+BT /F3 6.7 Tf 45 512 Td (                bestColor = currentColor;) Tj ET
+BT /F3 6.7 Tf 45 503 Td (            }) Tj ET
+BT /F3 6.7 Tf 45 494 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 485 Td (        System.out.println\("Longest Streak: '" + bestColor) Tj ET
+BT /F3 6.7 Tf 45 476 Td (            + "' repeated " + bestLength + " times"\);) Tj ET
+BT /F3 6.7 Tf 45 467 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 458 Td (    public static void main\(String[] args\) {) Tj ET
+BT /F3 6.7 Tf 45 449 Td (        findLongestStreak\("RRGGGYRR"\);) Tj ET
+BT /F3 6.7 Tf 45 440 Td (        findLongestStreak\("RRRRYYGG"\);) Tj ET
+BT /F3 6.7 Tf 45 431 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 422 Td (}) Tj ET
+BT /F2 11 Tf 42 410 Td (Sample Output) Tj ET
+BT /F3 7.4 Tf 45 391 Td (Longest Streak: 'G' repeated 3 times) Tj ET
+BT /F3 7.4 Tf 45 380 Td (Longest Streak: 'R' repeated 4 times) Tj ET
+BT /F2 11 Tf 42 366 Td (Complexity / Key Notes) Tj ET
+BT /F1 8.2 Tf 42 347 Td (Time: O\(n\) for a single pass. Extra space: O\(1\).) Tj ET
+BT /F1 7 Tf 510 18 Td (1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000003117 00000 n 
+0000003187 00000 n 
+0000003262 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3330
+%%EOF

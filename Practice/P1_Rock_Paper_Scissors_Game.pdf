@@ -1,0 +1,83 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3480 >>
+stream
+BT /F2 15 Tf 42 800 Td (Rock-Paper-Scissors Game) Tj ET
+BT /F1 9 Tf 42 774 Td (Week 1 Practice - Problem 1 | Java) Tj ET
+BT /F2 11 Tf 42 752 Td (Problem Summary) Tj ET
+BT /F1 8.2 Tf 42 733 Td (Simulate five rounds. The computer chooses randomly, the player's example moves are predefined for a live) Tj ET
+BT /F1 8.2 Tf 42 719 Td (demo, and the program reports the per-round table and summary statistics.) Tj ET
+BT /F2 11 Tf 42 702 Td (Java Solution) Tj ET
+BT /F3 6.7 Tf 45 683 Td (import java.util.Random;) Tj ET
+BT /F3 6.7 Tf 45 674 Td (public class Main {) Tj ET
+BT /F3 6.7 Tf 45 665 Td (    static String playRound\(String playerMove, String computerMove\) {) Tj ET
+BT /F3 6.7 Tf 45 656 Td (        if \(playerMove.equals\(computerMove\)\) return "Draw";) Tj ET
+BT /F3 6.7 Tf 45 647 Td (        if \(\(playerMove.equals\("Rock"\) && computerMove.equals\("Scissors"\)\)) Tj ET
+BT /F3 6.7 Tf 45 638 Td (            || \(playerMove.equals\("Paper"\) && computerMove.equals\("Rock"\)\)) Tj ET
+BT /F3 6.7 Tf 45 629 Td (            || \(playerMove.equals\("Scissors"\) && computerMove.equals\("Paper"\)\)\)) Tj ET
+BT /F3 6.7 Tf 45 620 Td (            return "Player Wins";) Tj ET
+BT /F3 6.7 Tf 45 611 Td (        return "Computer Wins";) Tj ET
+BT /F3 6.7 Tf 45 602 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 593 Td (    public static void main\(String[] args\) {) Tj ET
+BT /F3 6.7 Tf 45 584 Td (        String[] moves = {"Rock", "Paper", "Scissors"};) Tj ET
+BT /F3 6.7 Tf 45 575 Td (        String[] player = {"Rock", "Paper", "Scissors", "Rock", "Paper"};) Tj ET
+BT /F3 6.7 Tf 45 566 Td (        Random random = new Random\(\);) Tj ET
+BT /F3 6.7 Tf 45 557 Td (        int wins = 0, losses = 0, draws = 0;) Tj ET
+BT /F3 6.7 Tf 45 548 Td (        System.out.println\("Round | Player | Computer | Result"\);) Tj ET
+BT /F3 6.7 Tf 45 539 Td (        for \(int i = 0; i < player.length; i++\) {) Tj ET
+BT /F3 6.7 Tf 45 530 Td (            String computer = moves[random.nextInt\(3\)];) Tj ET
+BT /F3 6.7 Tf 45 521 Td (            String result = playRound\(player[i], computer\);) Tj ET
+BT /F3 6.7 Tf 45 512 Td (            if \(result.equals\("Player Wins"\)\) wins++;) Tj ET
+BT /F3 6.7 Tf 45 503 Td (            else if \(result.equals\("Computer Wins"\)\) losses++;) Tj ET
+BT /F3 6.7 Tf 45 494 Td (            else draws++;) Tj ET
+BT /F3 6.7 Tf 45 485 Td (            System.out.printf\("%d | %s | %s | %s%n",) Tj ET
+BT /F3 6.7 Tf 45 476 Td (                i + 1, player[i], computer, result\);) Tj ET
+BT /F3 6.7 Tf 45 467 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 458 Td (        System.out.printf\("Wins: %d | Losses: %d | Draws: %d | Win %% = %.1f%%%n",) Tj ET
+BT /F3 6.7 Tf 45 449 Td (            wins, losses, draws, wins * 100.0 / player.length\);) Tj ET
+BT /F3 6.7 Tf 45 440 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 431 Td (}) Tj ET
+BT /F2 11 Tf 42 419 Td (Sample Output) Tj ET
+BT /F3 7.4 Tf 45 400 Td (Round | Player | Computer | Result) Tj ET
+BT /F3 7.4 Tf 45 389 Td (\(Computer moves are random; sample rows vary.\)) Tj ET
+BT /F3 7.4 Tf 45 378 Td (Wins + Losses + Draws = 5) Tj ET
+BT /F3 7.4 Tf 45 367 Td (Win percentage = Wins / 5 * 100) Tj ET
+BT /F2 11 Tf 42 353 Td (Complexity / Key Notes) Tj ET
+BT /F1 8.2 Tf 42 334 Td (Time and space: O\(N\), where N is the number of rounds, because the moves/results are processed and kept) Tj ET
+BT /F1 8.2 Tf 42 320 Td (for the report. Player input is represented by a predefined list as allowed in the prompt.) Tj ET
+BT /F1 7 Tf 510 18 Td (1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000003792 00000 n 
+0000003862 00000 n 
+0000003937 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4005
+%%EOF

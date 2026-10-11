@@ -1,0 +1,83 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3219 >>
+stream
+BT /F2 15 Tf 42 800 Td (The Typing Speed Test Accuracy Checker) Tj ET
+BT /F1 9 Tf 42 774 Td (Week 1 Assignment - Problem 2 | Java) Tj ET
+BT /F2 11 Tf 42 752 Td (Problem Summary) Tj ET
+BT /F1 8.2 Tf 42 733 Td (Compare equal-length strings position by position, count matching characters, calculate accuracy, and) Tj ET
+BT /F1 8.2 Tf 42 719 Td (report the first mismatch using a 1-based position.) Tj ET
+BT /F2 11 Tf 42 702 Td (Java Solution) Tj ET
+BT /F3 6.7 Tf 45 683 Td (public class Main {) Tj ET
+BT /F3 6.7 Tf 45 674 Td (    static void checkTypingAccuracy\(String original, String typed\) {) Tj ET
+BT /F3 6.7 Tf 45 665 Td (        if \(original.length\(\) != typed.length\(\)\) {) Tj ET
+BT /F3 6.7 Tf 45 656 Td (            System.out.println\("Inputs must have equal length"\);) Tj ET
+BT /F3 6.7 Tf 45 647 Td (            return;) Tj ET
+BT /F3 6.7 Tf 45 638 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 629 Td (        int matched = 0, firstMismatch = -1;) Tj ET
+BT /F3 6.7 Tf 45 620 Td (        for \(int i = 0; i < original.length\(\); i++\) {) Tj ET
+BT /F3 6.7 Tf 45 611 Td (            if \(original.charAt\(i\) == typed.charAt\(i\)\) {) Tj ET
+BT /F3 6.7 Tf 45 602 Td (                matched++;) Tj ET
+BT /F3 6.7 Tf 45 593 Td (            } else if \(firstMismatch == -1\) {) Tj ET
+BT /F3 6.7 Tf 45 584 Td (                firstMismatch = i;) Tj ET
+BT /F3 6.7 Tf 45 575 Td (            }) Tj ET
+BT /F3 6.7 Tf 45 566 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 557 Td (        double accuracy = original.length\(\) == 0 ? 100.0) Tj ET
+BT /F3 6.7 Tf 45 548 Td (            : matched * 100.0 / original.length\(\);) Tj ET
+BT /F3 6.7 Tf 45 539 Td (        System.out.printf\("Matched: %d/%d | Accuracy: %.2f%% | ",) Tj ET
+BT /F3 6.7 Tf 45 530 Td (            matched, original.length\(\), accuracy\);) Tj ET
+BT /F3 6.7 Tf 45 521 Td (        if \(firstMismatch == -1\) {) Tj ET
+BT /F3 6.7 Tf 45 512 Td (            System.out.println\("No Mismatches"\);) Tj ET
+BT /F3 6.7 Tf 45 503 Td (        } else {) Tj ET
+BT /F3 6.7 Tf 45 494 Td (            System.out.printf\("First Mismatch at position %d \('%c' vs '%c'\)%n",) Tj ET
+BT /F3 6.7 Tf 45 485 Td (                firstMismatch + 1, original.charAt\(firstMismatch\),) Tj ET
+BT /F3 6.7 Tf 45 476 Td (                typed.charAt\(firstMismatch\)\);) Tj ET
+BT /F3 6.7 Tf 45 467 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 458 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 449 Td (    public static void main\(String[] args\) {) Tj ET
+BT /F3 6.7 Tf 45 440 Td (        checkTypingAccuracy\("hello world", "hello worlt"\);) Tj ET
+BT /F3 6.7 Tf 45 431 Td (        checkTypingAccuracy\("coding", "coding"\);) Tj ET
+BT /F3 6.7 Tf 45 422 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 413 Td (}) Tj ET
+BT /F2 11 Tf 42 401 Td (Sample Output) Tj ET
+BT /F3 7.4 Tf 45 382 Td (Matched: 10/11 | Accuracy: 90.91% | First Mismatch at position 11 \('d' vs 't'\)) Tj ET
+BT /F3 7.4 Tf 45 371 Td (Matched: 6/6 | Accuracy: 100.00% | No Mismatches) Tj ET
+BT /F2 11 Tf 42 357 Td (Complexity / Key Notes) Tj ET
+BT /F1 8.2 Tf 42 338 Td (Time: O\(n\). Extra space: O\(1\). The source specifies equal-length strings; the solution also validates this) Tj ET
+BT /F1 8.2 Tf 42 324 Td (condition.) Tj ET
+BT /F1 7 Tf 510 18 Td (1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000003531 00000 n 
+0000003601 00000 n 
+0000003676 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3744
+%%EOF

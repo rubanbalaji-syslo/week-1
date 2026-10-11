@@ -1,0 +1,90 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3799 >>
+stream
+BT /F2 15 Tf 42 800 Td (Palindrome Checker - Three Approaches) Tj ET
+BT /F1 9 Tf 42 774 Td (Week 1 Practice - Problem 2 | Java) Tj ET
+BT /F2 11 Tf 42 752 Td (Problem Summary) Tj ET
+BT /F1 8.2 Tf 42 733 Td (Check the same text using iterative two-pointer comparison, recursion, and character-array reversal; all) Tj ET
+BT /F1 8.2 Tf 42 719 Td (three methods should agree.) Tj ET
+BT /F2 11 Tf 42 702 Td (Java Solution) Tj ET
+BT /F3 6.7 Tf 45 683 Td (public class Main {) Tj ET
+BT /F3 6.7 Tf 45 674 Td (    static boolean isPalindromeIterative\(String text\) {) Tj ET
+BT /F3 6.7 Tf 45 665 Td (        int left = 0, right = text.length\(\) - 1;) Tj ET
+BT /F3 6.7 Tf 45 656 Td (        while \(left < right\) {) Tj ET
+BT /F3 6.7 Tf 45 647 Td (            if \(text.charAt\(left\) != text.charAt\(right\)\) return false;) Tj ET
+BT /F3 6.7 Tf 45 638 Td (            left++; right--;) Tj ET
+BT /F3 6.7 Tf 45 629 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 620 Td (        return true;) Tj ET
+BT /F3 6.7 Tf 45 611 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 602 Td (    static boolean isPalindromeRecursive\(String text\) {) Tj ET
+BT /F3 6.7 Tf 45 593 Td (        return recursiveCheck\(text, 0, text.length\(\) - 1\);) Tj ET
+BT /F3 6.7 Tf 45 584 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 575 Td (    static boolean recursiveCheck\(String text, int left, int right\) {) Tj ET
+BT /F3 6.7 Tf 45 566 Td (        if \(left >= right\) return true;) Tj ET
+BT /F3 6.7 Tf 45 557 Td (        if \(text.charAt\(left\) != text.charAt\(right\)\) return false;) Tj ET
+BT /F3 6.7 Tf 45 548 Td (        return recursiveCheck\(text, left + 1, right - 1\);) Tj ET
+BT /F3 6.7 Tf 45 539 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 530 Td (    static boolean isPalindromeArrayReversal\(String text\) {) Tj ET
+BT /F3 6.7 Tf 45 521 Td (        char[] chars = text.toCharArray\(\);) Tj ET
+BT /F3 6.7 Tf 45 512 Td (        int left = 0, right = chars.length - 1;) Tj ET
+BT /F3 6.7 Tf 45 503 Td (        while \(left < right\) {) Tj ET
+BT /F3 6.7 Tf 45 494 Td (            char temp = chars[left]; chars[left] = chars[right];) Tj ET
+BT /F3 6.7 Tf 45 485 Td (            chars[right] = temp; left++; right--;) Tj ET
+BT /F3 6.7 Tf 45 476 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 467 Td (        return text.equals\(new String\(chars\)\);) Tj ET
+BT /F3 6.7 Tf 45 458 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 449 Td (    static String label\(boolean value\) {) Tj ET
+BT /F3 6.7 Tf 45 440 Td (        return value ? "Palindrome" : "Not Palindrome";) Tj ET
+BT /F3 6.7 Tf 45 431 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 422 Td (    static void check\(String text\) {) Tj ET
+BT /F3 6.7 Tf 45 413 Td (        System.out.println\("Iterative: " + label\(isPalindromeIterative\(text\)\)) Tj ET
+BT /F3 6.7 Tf 45 404 Td (            + " | Recursive: " + label\(isPalindromeRecursive\(text\)\)) Tj ET
+BT /F3 6.7 Tf 45 395 Td (            + " | Array Reversal: " + label\(isPalindromeArrayReversal\(text\)\)\);) Tj ET
+BT /F3 6.7 Tf 45 386 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 377 Td (    public static void main\(String[] args\) {) Tj ET
+BT /F3 6.7 Tf 45 368 Td (        check\("madam"\); check\("hello"\);) Tj ET
+BT /F3 6.7 Tf 45 359 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 350 Td (}) Tj ET
+BT /F2 11 Tf 42 338 Td (Sample Output) Tj ET
+BT /F3 7.4 Tf 45 319 Td (Iterative: Palindrome | Recursive: Palindrome | Array Reversal: Palindrome) Tj ET
+BT /F3 7.4 Tf 45 308 Td (Iterative: Not Palindrome | Recursive: Not Palindrome | Array Reversal: Not Palindrome) Tj ET
+BT /F2 11 Tf 42 294 Td (Complexity / Key Notes) Tj ET
+BT /F1 8.2 Tf 42 275 Td (Each method takes O\(n\) time. Iterative uses O\(1\) extra space, recursion uses O\(n\) call stack, and array) Tj ET
+BT /F1 8.2 Tf 42 261 Td (reversal uses O\(n\) extra space. Comparison is case-sensitive and includes spaces.) Tj ET
+BT /F1 7 Tf 510 18 Td (1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000004111 00000 n 
+0000004181 00000 n 
+0000004256 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4324
+%%EOF

@@ -1,0 +1,82 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3202 >>
+stream
+BT /F2 15 Tf 42 800 Td (The Warehouse Inventory Balancer) Tj ET
+BT /F1 9 Tf 42 774 Td (Week 1 Assignment - Problem 4 | Java) Tj ET
+BT /F2 11 Tf 42 752 Td (Problem Summary) Tj ET
+BT /F1 8.2 Tf 42 733 Td (Calculate both section totals, report Balanced or Not Balanced, and find the highest individual quantity) Tj ET
+BT /F1 8.2 Tf 42 719 Td (across both arrays. Ties retain the first location: Section A is scanned before Section B.) Tj ET
+BT /F2 11 Tf 42 702 Td (Java Solution) Tj ET
+BT /F3 6.7 Tf 45 683 Td (public class Main {) Tj ET
+BT /F3 6.7 Tf 45 674 Td (    static void analyzeInventory\(int[] sectionA, int[] sectionB\) {) Tj ET
+BT /F3 6.7 Tf 45 665 Td (        if \(sectionA.length != sectionB.length\) {) Tj ET
+BT /F3 6.7 Tf 45 656 Td (            System.out.println\("Sections must have equal length"\);) Tj ET
+BT /F3 6.7 Tf 45 647 Td (            return;) Tj ET
+BT /F3 6.7 Tf 45 638 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 629 Td (        int totalA = 0, totalB = 0;) Tj ET
+BT /F3 6.7 Tf 45 620 Td (        int max = Integer.MIN_VALUE, maxIndex = 0;) Tj ET
+BT /F3 6.7 Tf 45 611 Td (        String maxSection = "A";) Tj ET
+BT /F3 6.7 Tf 45 602 Td (        for \(int i = 0; i < sectionA.length; i++\) {) Tj ET
+BT /F3 6.7 Tf 45 593 Td (            totalA += sectionA[i];) Tj ET
+BT /F3 6.7 Tf 45 584 Td (            if \(sectionA[i] > max\) {) Tj ET
+BT /F3 6.7 Tf 45 575 Td (                max = sectionA[i]; maxSection = "A"; maxIndex = i;) Tj ET
+BT /F3 6.7 Tf 45 566 Td (            }) Tj ET
+BT /F3 6.7 Tf 45 557 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 548 Td (        for \(int i = 0; i < sectionB.length; i++\) {) Tj ET
+BT /F3 6.7 Tf 45 539 Td (            totalB += sectionB[i];) Tj ET
+BT /F3 6.7 Tf 45 530 Td (            if \(sectionB[i] > max\) {) Tj ET
+BT /F3 6.7 Tf 45 521 Td (                max = sectionB[i]; maxSection = "B"; maxIndex = i;) Tj ET
+BT /F3 6.7 Tf 45 512 Td (            }) Tj ET
+BT /F3 6.7 Tf 45 503 Td (        }) Tj ET
+BT /F3 6.7 Tf 45 494 Td (        String status = totalA == totalB ? "Balanced" : "Not Balanced";) Tj ET
+BT /F3 6.7 Tf 45 485 Td (        System.out.printf\("Section A Total: %d | Section B Total: %d | Status: %s | ",) Tj ET
+BT /F3 6.7 Tf 45 476 Td (            totalA, totalB, status\);) Tj ET
+BT /F3 6.7 Tf 45 467 Td (        System.out.printf\("Highest Quantity: %d \(Section %s, Item %d\)%n",) Tj ET
+BT /F3 6.7 Tf 45 458 Td (            max, maxSection, maxIndex + 1\);) Tj ET
+BT /F3 6.7 Tf 45 449 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 440 Td (    public static void main\(String[] args\) {) Tj ET
+BT /F3 6.7 Tf 45 431 Td (        analyzeInventory\(new int[]{20,15,30}, new int[]{25,10,30}\);) Tj ET
+BT /F3 6.7 Tf 45 422 Td (    }) Tj ET
+BT /F3 6.7 Tf 45 413 Td (}) Tj ET
+BT /F2 11 Tf 42 401 Td (Sample Output) Tj ET
+BT /F3 7.4 Tf 45 382 Td (Section A Total: 65 | Section B Total: 65 | Status: Balanced | Highest Quantity: 30 \(Section A, Item 3\)) Tj ET
+BT /F2 11 Tf 42 368 Td (Complexity / Key Notes) Tj ET
+BT /F1 8.2 Tf 42 349 Td (Time: O\(n\) for each pair of arrays of equal length. Extra space: O\(1\). Strict comparisons preserve the) Tj ET
+BT /F1 8.2 Tf 42 335 Td (first occurrence of a tied maximum.) Tj ET
+BT /F1 7 Tf 510 18 Td (1/1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000003514 00000 n 
+0000003584 00000 n 
+0000003659 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3727
+%%EOF
